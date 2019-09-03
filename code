@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package carulasan;
+
+/**
+ *
+ * @author 333
+ */
+
+import java.util.Scanner;
+import java.lang.*;
+public class Carulasan {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        	System.out.println("Enter a year: ");
+		String data = input.nextLine();
+                 int year = 0;
+                String a = "";
+                int len = data.length();
+                
+                int reslen = len - 1;
+                
+                for (int i = reslen ; i >= 0; i--){
+                        
+                        
+                        if(data.charAt(i) == ' '){
+                            break;
+                        }
+                        
+                        a = a + data.charAt(i);
+                       
+                }
+               StringBuffer sbf = new StringBuffer(a); 
+               
+              
+                year = Integer.parseInt(sbf.reverse().toString());
+		
+		switch ((year- 1900) % 12) {
+		case 0 : System.out.println("Rat"); break; 
+		case 1 : System.out.println("Ox"); break;
+		case 2 : System.out.println("Tiger"); break; 
+		case 3 : System.out.println("Rabbit"); break; 
+		case 4 : System.out.println("Dragon"); break; 
+		case 5 : System.out.println("Snake"); break;
+		case 6 : System.out.println("Horse"); break;
+		case 7 : System.out.println("Goat"); break; 
+		case 8 : System.out.println("MOnkey"); break; 
+		case 9 : System.out.println("Rooster"); break; 
+		case 10 : System.out.println("Dog"); break; 
+		case 11 : System.out.println("Pig"); break; 
+		
+		}
+                
+    }
+    
+}
